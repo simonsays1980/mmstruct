@@ -1,7 +1,7 @@
 useDynLib(mmstruct)
 exportPattern("^[[:alpha:]]+")
-
+	
 export (
 	"simulateEKOP",
-	"simulateEKOPMis"
+	"computeKokotLik"
 )
