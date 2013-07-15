@@ -3,5 +3,6 @@ exportPattern("^[[:alpha:]]+")
 	
 export (
 	"simulateEKOP",
-	"computeKokotLik"
+	"computeKokotLik",
+    "estModelKokotML"
 )

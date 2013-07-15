@@ -1,6 +1,6 @@
 "estModelKokotML" <- function(data, startpar, T = 390, methodLik = c("precise", "approx")) {
 	
-	if(missing(startpar)) {
+	if (missing(startpar)) {
 		cat("Using default starting values...\n")
 		tmp <- mean(data, na.rm = TRUE)/T
 		startpar 	<- c(0, tmp * 0.75/2, tmp * 0.25/2)
