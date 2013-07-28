@@ -1,0 +1,18 @@
+# Compiled source #
+###################
+*.o
+*.so
+
+# RUnit files    #
+##################
+report*
+
+# R specific     #
+##################
+symbols.rds
+
+# OS generated   #
+##################
+.DS_Store
+.exrc
+*.swp
