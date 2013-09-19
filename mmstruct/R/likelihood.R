@@ -56,8 +56,8 @@
     for (i in 1:NROW(data)) {
         tradeter1[i]    <- B[i] * log(lepsilon * T) - lgamma(B[i] + 1)
         tradeter2[i]    <- S[i] * log(lepsilon * T) - lgamma(S[i] + 1)
-        tradeter3[i]    <- B[i] + log((lepsilon + lmu) * T) - lgamma(B[i] + 1)
-        tradeter4[i]    <- S[i] + log((lepsilon + lmu) * T) - lgamma(S[i] + 1)
+        tradeter3[i]    <- B[i] * log((lepsilon + lmu) * T) - lgamma(B[i] + 1)
+        tradeter4[i]    <- S[i] * log((lepsilon + lmu) * T) - lgamma(S[i] + 1)
     }
 
     epster1     <- (-lepsilon * T) 
