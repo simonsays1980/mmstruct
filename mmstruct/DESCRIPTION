@@ -10,10 +10,6 @@ License: What license is it under?
 Depends: Rcpp (>= 0.10.3), RcppArmadillo (>= 0.3.820), RSQLite (>= 0.11.4)
 LinkingTo: Rcpp, RcppArmadillo, RSQLite
 Collate:
-        loadDB.R
-        AllVirtuals.R
-        AllGenerics.R
-        mmstruct.R
         likelihood.R
         model_EKOP.R
         RcppExports.R
