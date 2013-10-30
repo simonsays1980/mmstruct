@@ -13,12 +13,12 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        unsigned int nobs = Rcpp::as<unsigned int >(nobsSEXP);
-        double alpha = Rcpp::as<double >(alphaSEXP);
-        double epsilon = Rcpp::as<double >(epsilonSEXP);
-        double delta = Rcpp::as<double >(deltaSEXP);
-        double mu = Rcpp::as<double >(muSEXP);
-        double T = Rcpp::as<double >(TSEXP);
+        Rcpp::traits::input_parameter< const unsigned int >::type nobs(nobsSEXP );
+        Rcpp::traits::input_parameter< const double >::type alpha(alphaSEXP );
+        Rcpp::traits::input_parameter< const double >::type epsilon(epsilonSEXP );
+        Rcpp::traits::input_parameter< const double >::type delta(deltaSEXP );
+        Rcpp::traits::input_parameter< const double >::type mu(muSEXP );
+        Rcpp::traits::input_parameter< const double >::type T(TSEXP );
         arma::imat __result = simulateEKOP_cc(nobs, alpha, epsilon, delta, mu, T);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -33,14 +33,110 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        unsigned int nobs = Rcpp::as<unsigned int >(nobsSEXP);
-        double alpha = Rcpp::as<double >(alphaSEXP);
-        double epsilon = Rcpp::as<double >(epsilonSEXP);
-        double delta = Rcpp::as<double >(deltaSEXP);
-        double mu = Rcpp::as<double >(muSEXP);
-        double mis = Rcpp::as<double >(misSEXP);
-        double T = Rcpp::as<double >(TSEXP);
+        Rcpp::traits::input_parameter< const unsigned int >::type nobs(nobsSEXP );
+        Rcpp::traits::input_parameter< const double >::type alpha(alphaSEXP );
+        Rcpp::traits::input_parameter< const double >::type epsilon(epsilonSEXP );
+        Rcpp::traits::input_parameter< const double >::type delta(deltaSEXP );
+        Rcpp::traits::input_parameter< const double >::type mu(muSEXP );
+        Rcpp::traits::input_parameter< const double >::type mis(misSEXP );
+        Rcpp::traits::input_parameter< const double >::type T(TSEXP );
         arma::imat __result = simulateEKOPMis_cc(nobs, alpha, epsilon, delta, mu, mis, T);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// dtparse_cc
+Rcpp::NumericVector dtparse_cc(Rcpp::CharacterVector time_vec, const int required_comp);
+RcppExport SEXP mmstruct_dtparse_cc(SEXP time_vecSEXP, SEXP required_compSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type time_vec(time_vecSEXP );
+        Rcpp::traits::input_parameter< const int >::type required_comp(required_compSEXP );
+        Rcpp::NumericVector __result = dtparse_cc(time_vec, required_comp);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// dtparseV_cc
+Rcpp::NumericVector dtparseV_cc(Rcpp::CharacterVector time_vec, const int required_comp);
+RcppExport SEXP mmstruct_dtparseV_cc(SEXP time_vecSEXP, SEXP required_compSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type time_vec(time_vecSEXP );
+        Rcpp::traits::input_parameter< const int >::type required_comp(required_compSEXP );
+        Rcpp::NumericVector __result = dtparseV_cc(time_vec, required_comp);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// dtparseV_no_del2_cc
+Rcpp::NumericVector dtparseV_no_del2_cc(Rcpp::CharacterVector time_vec, const int required_comp);
+RcppExport SEXP mmstruct_dtparseV_no_del2_cc(SEXP time_vecSEXP, SEXP required_compSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type time_vec(time_vecSEXP );
+        Rcpp::traits::input_parameter< const int >::type required_comp(required_compSEXP );
+        Rcpp::NumericVector __result = dtparseV_no_del2_cc(time_vec, required_comp);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// dtparseV_no_del4_cc
+Rcpp::NumericVector dtparseV_no_del4_cc(Rcpp::CharacterVector time_vec, const int required_comp);
+RcppExport SEXP mmstruct_dtparseV_no_del4_cc(SEXP time_vecSEXP, SEXP required_compSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type time_vec(time_vecSEXP );
+        Rcpp::traits::input_parameter< const int >::type required_comp(required_compSEXP );
+        Rcpp::NumericVector __result = dtparseV_no_del4_cc(time_vec, required_comp);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// tparseV_cc
+Rcpp::NumericVector tparseV_cc(Rcpp::CharacterVector time_vec);
+RcppExport SEXP mmstruct_tparseV_cc(SEXP time_vecSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type time_vec(time_vecSEXP );
+        Rcpp::NumericVector __result = tparseV_cc(time_vec);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
+// dtparseV_format_cc
+Rcpp::NumericVector dtparseV_format_cc(Rcpp::CharacterVector day_vec, Rcpp::CharacterVector time_vec, const std::string day_format);
+RcppExport SEXP mmstruct_dtparseV_format_cc(SEXP day_vecSEXP, SEXP time_vecSEXP, SEXP day_formatSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type day_vec(day_vecSEXP );
+        Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type time_vec(time_vecSEXP );
+        Rcpp::traits::input_parameter< const std::string >::type day_format(day_formatSEXP );
+        Rcpp::NumericVector __result = dtparseV_format_cc(day_vec, time_vec, day_format);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);
